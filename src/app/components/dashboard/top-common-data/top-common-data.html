@@ -1,0 +1,19 @@
+<div class="b-b-{{ data()?.borderColor }} border-5 border-0 card o-hidden">
+  <div class=" {{ data()?.bgClass }} b-r-4 card-body">
+    <div class="media align-items-center static-top-widget">
+      <div class="media-body p-0">
+        <span class="m-0">{{ data()?.title }}</span>
+        <h4 class="mb-0 counter">
+          {{ data()?.count }}
+          <span class="badge badge-light-{{ data()?.borderColor }} grow">
+            <app-feather-icons [icon]="data()?.trendingIcon" />
+            {{ data()?.trending }}
+          </span>
+        </h4>
+      </div>
+      <div class="align-self-center text-center">
+        <app-feather-icons [icon]="data()?.icon" />
+      </div>
+    </div>
+  </div>
+</div>
