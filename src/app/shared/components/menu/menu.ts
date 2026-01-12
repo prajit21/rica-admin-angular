@@ -1,11 +1,6 @@
-import { NgTemplateOutlet, NgClass } from "@angular/common";
+import { NgClass, NgTemplateOutlet } from "@angular/common";
 import { Component, HostListener, inject } from "@angular/core";
-import {
-  NavigationEnd,
-  Router,
-  RouterLinkActive,
-  RouterLink,
-} from "@angular/router";
+import { NavigationEnd, Router, RouterLinkActive, RouterLink } from "@angular/router";
 
 import { IMenu, NavService } from "../../services/nav.service";
 import { FeatherIcons } from "../ui/feather-icons/feather-icons";
@@ -14,13 +9,7 @@ import { FeatherIcons } from "../ui/feather-icons/feather-icons";
   selector: "app-menu",
   templateUrl: "./menu.html",
   styleUrl: "./menu.scss",
-  imports: [
-    FeatherIcons,
-    NgTemplateOutlet,
-    RouterLinkActive,
-    NgClass,
-    RouterLink,
-  ],
+  imports: [FeatherIcons, NgTemplateOutlet, RouterLinkActive, RouterLink, NgClass],
 })
 export class Menu {
   private navService = inject(NavService);

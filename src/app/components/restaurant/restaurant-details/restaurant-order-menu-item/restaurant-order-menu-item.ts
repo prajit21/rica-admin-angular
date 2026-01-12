@@ -1,4 +1,4 @@
-import { NgClass, DecimalPipe } from "@angular/common";
+import { DecimalPipe } from "@angular/common";
 import { Component, input } from "@angular/core";
 
 import { restaurantOrders } from "../../../../shared/interface/restaurant";
@@ -7,7 +7,7 @@ import { restaurantOrders } from "../../../../shared/interface/restaurant";
   selector: "app-restaurant-order-menu-item",
   templateUrl: "./restaurant-order-menu-item.html",
   styleUrl: "./restaurant-order-menu-item.scss",
-  imports: [NgClass, DecimalPipe],
+  imports: [DecimalPipe],
 })
 export class RestaurantOrderMenuItem {
   readonly restaurantOrders = input<restaurantOrders[]>();
