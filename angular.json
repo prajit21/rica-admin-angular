@@ -20,7 +20,12 @@
           "options": {
             "stylePreprocessorOptions": {
               "sass": {
-                "silenceDeprecations": ["color-functions", "global-builtin", "import"]
+                "silenceDeprecations": [
+                  "color-functions",
+                  "global-builtin",
+                  "import",
+                  "if-function"
+                ]
               }
             },
             "outputPath": "dist/rica-admin",
