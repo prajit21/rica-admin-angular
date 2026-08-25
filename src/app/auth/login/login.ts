@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router, RouterLink } from "@angular/router";
 
@@ -8,6 +8,7 @@ import { FeatherIcons } from "../../shared/components/ui/feather-icons/feather-i
   selector: "app-login",
   templateUrl: "./login.html",
   styleUrl: "./login.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, FeatherIcons],
 })
 export class Login {

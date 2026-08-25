@@ -2,15 +2,28 @@
   <div class="header-logo-wrapper col-auto p-0">
     <div class="logo-wrapper">
       <a href="javascript:void(0)">
-        <img class="img-fluid main-logo" src="assets/images/logo/logo.png" alt="logo" />
-        <img class="img-fluid white-logo" src="assets/images/logo/logo-white.png" alt="logo"
+        <img
+          class="img-fluid main-logo"
+          src="assets/images/logo/logo.png"
+          alt="logo" />
+        <img
+          class="img-fluid white-logo"
+          src="assets/images/logo/logo-white.png"
+          alt="logo"
       /></a>
     </div>
     <div class="toggle-sidebar" (click)="toggleSidebar()">
-      <app-feather-icons [icon]="'align-center'" [class]="'status_toggle middle sidebar-toggle'" />
+      <app-feather-icons
+        [icon]="'align-center'"
+        [class]="'status_toggle middle sidebar-toggle'"
+      />
     </div>
   </div>
-  <form class="form-inline search-full col" [class.open]="isSearch" method="get">
+  <form
+    class="form-inline search-full col"
+    [class.open]="isSearch"
+    method="get"
+  >
     <div class="form-group w-100">
       <div class="Typeahead Typeahead--twitterUsers">
         <div class="u-posRelative">
@@ -22,42 +35,51 @@
             name="editorContent"
             (keyup)="searchTerm(text)"
           />
-          <app-feather-icons [icon]="'x'" [class]="'close-search'" (click)="closeSearch()" />
+          <app-feather-icons
+            [icon]="'x'"
+            [class]="'close-search'"
+            (click)="closeSearch()"
+          />
           <div class="spinner-border Typeahead-spinner" role="status">
             <span class="sr-only">Loading...</span>
           </div>
         </div>
         @if (menuItems.length) {
-          <div
-            class="Typeahead-menu custom-scrollbar"
-            [class.is-open]="searchResult"
-            id="search-outer"
-            (clickOutside)="clickOutside()"
-          >
-            @for (menuItem of menuItems | slice: 0 : 8; track menuItem) {
-              <div class="ProfileCard u-cf">
-                <div class="ProfileCard-avatar"></div>
-                <div class="ProfileCard-details">
-                  <div class="ProfileCard-realName">
-                    <app-feather-icons [icon]="menuItem.icon" />
-                    <a [routerLink]="menuItem?.path" class="realname" (click)="removeFix()">{{
-                      menuItem?.title
-                    }}</a>
-                  </div>
-                </div>
+        <div
+          class="Typeahead-menu custom-scrollbar"
+          [class.is-open]="searchResult"
+          id="search-outer"
+          (clickOutside)="clickOutside()"
+        >
+          @for (menuItem of menuItems | slice: 0 : 8; track menuItem) {
+          <div class="ProfileCard u-cf">
+            <div class="ProfileCard-avatar"></div>
+            <div class="ProfileCard-details">
+              <div class="ProfileCard-realName">
+                <app-feather-icons [icon]="menuItem.icon" />
+                <a
+                  [routerLink]="$safeNavigationMigration(menuItem?.path)"
+                  class="realname"
+                  (click)="removeFix()"
+                  >{{ menuItem?.title }}</a
+                >
               </div>
-            }
-          </div>
-        } @else {
-          <div
-            class="Typeahead-menu"
-            [class.is-open]="searchResultEmpty"
-            (clickOutside)="clickOutside()"
-          >
-            <div class="tt-dataset tt-dataset-0">
-              <div class="EmptyMessage" style="color: black">Oops!! There are no result found.</div>
             </div>
           </div>
+          }
+        </div>
+        } @else {
+        <div
+          class="Typeahead-menu"
+          [class.is-open]="searchResultEmpty"
+          (clickOutside)="clickOutside()"
+        >
+          <div class="tt-dataset tt-dataset-0">
+            <div class="EmptyMessage" style="color: black">
+              Oops!! There are no result found.
+            </div>
+          </div>
+        </div>
         }
       </div>
     </div>

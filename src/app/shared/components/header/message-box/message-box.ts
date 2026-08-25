@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { headerMessageBox } from "../../../data/data/header";
 import { FeatherIcons } from "../../ui/feather-icons/feather-icons";
@@ -7,6 +7,7 @@ import { FeatherIcons } from "../../ui/feather-icons/feather-icons";
   selector: "app-message-box",
   templateUrl: "./message-box.html",
   styleUrl: "./message-box.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FeatherIcons],
 })
 export class MessageBox {

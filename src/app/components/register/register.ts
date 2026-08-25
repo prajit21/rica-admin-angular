@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { FeatherIcons } from "../../shared/components/ui/feather-icons/feather-icons";
@@ -7,6 +7,7 @@ import { FeatherIcons } from "../../shared/components/ui/feather-icons/feather-i
   selector: "app-register",
   templateUrl: "./register.html",
   styleUrl: "./register.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FeatherIcons, RouterLink],
 })
 export class Register {

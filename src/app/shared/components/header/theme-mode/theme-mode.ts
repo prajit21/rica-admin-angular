@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { LayoutService } from "../../../services/layout.service";
 
@@ -7,6 +7,7 @@ import { LayoutService } from "../../../services/layout.service";
   selector: "app-theme-mode",
   templateUrl: "./theme-mode.html",
   styleUrl: "./theme-mode.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgClass],
 })
 export class ThemeMode {

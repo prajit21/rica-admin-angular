@@ -1,4 +1,9 @@
-import { Component, inject, input } from "@angular/core";
+import {
+  Component,
+  inject,
+  input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import {
   Gallery,
@@ -15,6 +20,7 @@ import { tourGallery } from "../../../../shared/interface/tours";
   selector: "app-tour-gallery",
   templateUrl: "./tour-gallery.html",
   styleUrl: "./tour-gallery.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [LightboxModule],
 })
 export class TourGallery {

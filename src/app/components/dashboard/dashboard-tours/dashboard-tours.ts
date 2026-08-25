@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { CarouselModule } from "ngx-owl-carousel-o";
 
@@ -9,6 +9,7 @@ import { ToursService } from "../../../shared/services/tours.service";
   selector: "app-dashboard-tours",
   templateUrl: "./dashboard-tours.html",
   styleUrl: "./dashboard-tours.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CarouselModule],
 })
 export class DashboardTours {

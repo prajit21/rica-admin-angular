@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { CarouselModule } from "ngx-owl-carousel-o";
 
@@ -8,6 +8,7 @@ import { hotelImages } from "../../../../shared/interface/hotel";
   selector: "app-hotel-detail",
   templateUrl: "./hotel-detail.html",
   styleUrl: "./hotel-detail.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CarouselModule],
 })
 export class HotelDetail {

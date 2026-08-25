@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -9,6 +9,7 @@ import { FeatherIcons } from "../../ui/feather-icons/feather-icons";
   selector: "app-user-profile",
   templateUrl: "./user-profile.html",
   styleUrl: "./user-profile.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FeatherIcons],
 })
 export class UserProfile {

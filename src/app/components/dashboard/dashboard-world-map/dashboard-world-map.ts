@@ -1,10 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { GoogleMapsModule } from "@angular/google-maps";
 
 @Component({
   selector: "app-dashboard-world-map",
   templateUrl: "./dashboard-world-map.html",
   styleUrl: "./dashboard-world-map.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [GoogleMapsModule],
 })
 export class DashboardWorldMap {

@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { FeatherIcons } from "../../shared/components/ui/feather-icons/feather-icons";
 import { Pagination } from "../../shared/components/ui/pagination/pagination";
@@ -9,6 +9,7 @@ import { BookingService } from "../../shared/services/booking.service";
   selector: "app-booking",
   templateUrl: "./booking.html",
   styleUrl: "./booking.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FeatherIcons, Pagination],
 })
 export class Booking {

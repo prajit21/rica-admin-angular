@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { RestaurantGallery } from "./restaurant-gallery/restaurant-gallery";
 import { RestaurantLocation } from "./restaurant-location/restaurant-location";
@@ -13,6 +13,7 @@ import { RestaurantService } from "../../../shared/services/restaurant.service";
   selector: "app-restaurant-details",
   templateUrl: "./restaurant-details.html",
   styleUrl: "./restaurant-details.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     RestaurantTabs,
     RestaurantOrder,

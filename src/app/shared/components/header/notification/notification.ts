@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { headerNotification } from "../../../data/data/header";
 import { FeatherIcons } from "../../ui/feather-icons/feather-icons";
@@ -7,6 +7,7 @@ import { FeatherIcons } from "../../ui/feather-icons/feather-icons";
   selector: "app-notification",
   templateUrl: "./notification.html",
   styleUrl: "./notification.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FeatherIcons],
 })
 export class Notification {

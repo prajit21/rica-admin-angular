@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbRatingConfig, NgbRating } from "@ng-bootstrap/ng-bootstrap";
 
@@ -10,6 +10,7 @@ import { ReviewService } from "../../shared/services/review.service";
   selector: "app-review",
   templateUrl: "./review.html",
   styleUrl: "./review.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgbRating, Pagination],
 })
 export class Review {

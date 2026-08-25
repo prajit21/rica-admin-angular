@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
@@ -10,6 +10,7 @@ import { addHotelDetails } from "../../../../shared/interface/hotel";
   selector: "app-room-details",
   templateUrl: "./room-details.html",
   styleUrl: "./room-details.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [DropzoneModule, NgxEditorModule, FormsModule],
 })
 export class RoomDetails {

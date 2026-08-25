@@ -1,4 +1,9 @@
-import { Component, inject, input } from "@angular/core";
+import {
+  Component,
+  inject,
+  input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 
 import { tourLocation } from "../../../../shared/interface/tours";
@@ -6,6 +11,7 @@ import { tourLocation } from "../../../../shared/interface/tours";
 @Component({
   selector: "app-tour-location",
   templateUrl: "./tour-location.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./tour-location.scss",
 })
 export class TourLocation {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbInputDatepicker } from "@ng-bootstrap/ng-bootstrap";
 import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
@@ -7,6 +7,7 @@ import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
   selector: "app-add-driver",
   templateUrl: "./add-driver.html",
   styleUrl: "./add-driver.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgbInputDatepicker, DropzoneModule],
 })
 export class AddDriver {

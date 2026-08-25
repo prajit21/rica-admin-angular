@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { restaurantOverview } from "../../../../shared/interface/restaurant";
 
@@ -7,6 +7,7 @@ import { restaurantOverview } from "../../../../shared/interface/restaurant";
   selector: "app-restaurant-overview",
   templateUrl: "./restaurant-overview.html",
   styleUrl: "./restaurant-overview.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgClass],
 })
 export class RestaurantOverview {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbDropdown,
@@ -14,6 +14,7 @@ import { dashboardVisitorChart } from "../../../shared/data/chart/dashboard-char
   selector: "app-dashboard-visitor-chart",
   templateUrl: "./dashboard-visitor-chart.html",
   styleUrl: "./dashboard-visitor-chart.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbDropdown,
     NgbDropdownToggle,

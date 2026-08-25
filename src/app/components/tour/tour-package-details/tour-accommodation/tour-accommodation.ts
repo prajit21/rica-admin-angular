@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { tourAccommodation } from "../../../../shared/interface/tours";
@@ -7,6 +7,7 @@ import { tourAccommodation } from "../../../../shared/interface/tours";
   selector: "app-tour-accommodation",
   templateUrl: "./tour-accommodation.html",
   styleUrl: "./tour-accommodation.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink],
 })
 export class TourAccommodation {

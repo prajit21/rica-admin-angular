@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { FeatherIcons } from "../../../shared/components/ui/feather-icons/feather-icons";
 import { dashboardCommonData } from "../../../shared/interface/dashboard";
@@ -7,6 +7,7 @@ import { dashboardCommonData } from "../../../shared/interface/dashboard";
   selector: "app-top-common-data",
   templateUrl: "./top-common-data.html",
   styleUrl: "./top-common-data.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FeatherIcons],
 })
 export class TopCommonData {

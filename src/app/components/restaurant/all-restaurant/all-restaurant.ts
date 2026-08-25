@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { FeatherIcons } from "../../../shared/components/ui/feather-icons/feather-icons";
@@ -10,6 +10,7 @@ import { RestaurantService } from "../../../shared/services/restaurant.service";
   selector: "app-all-restaurant",
   templateUrl: "./all-restaurant.html",
   styleUrl: "./all-restaurant.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, FeatherIcons, Pagination],
 })
 export class AllRestaurant {

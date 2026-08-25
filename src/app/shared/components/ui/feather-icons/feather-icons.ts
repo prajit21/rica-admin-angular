@@ -1,11 +1,18 @@
 import { isPlatformBrowser } from "@angular/common";
-import { Component, PLATFORM_ID, inject, input } from "@angular/core";
+import {
+  Component,
+  PLATFORM_ID,
+  inject,
+  input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import feather from "feather-icons";
 
 @Component({
   selector: "app-feather-icons",
   templateUrl: "./feather-icons.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./feather-icons.scss",
 })
 export class FeatherIcons {

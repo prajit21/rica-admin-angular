@@ -1,10 +1,16 @@
-import { Component, HostListener, input } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { restaurantOrders } from "../../../../shared/interface/restaurant";
 
 @Component({
   selector: "app-restaurant-order-menu",
   templateUrl: "./restaurant-order-menu.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./restaurant-order-menu.scss",
 })
 export class RestaurantOrderMenu {

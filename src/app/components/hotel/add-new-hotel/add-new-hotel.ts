@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   OwlDateTimeModule,
@@ -14,6 +14,7 @@ import { HotelService } from "../../../shared/services/hotel.service";
   selector: "app-add-new-hotel",
   templateUrl: "./add-new-hotel.html",
   styleUrl: "./add-new-hotel.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     TagInputModule,
     OwlDateTimeModule,

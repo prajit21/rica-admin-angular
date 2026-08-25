@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { TagInputModule } from "ngx-chips";
@@ -8,6 +8,7 @@ import { Editor, NgxEditorModule } from "ngx-editor";
   selector: "app-tour-add-package-category",
   templateUrl: "./tour-add-package-category.html",
   styleUrl: "./tour-add-package-category.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [TagInputModule, NgxEditorModule, FormsModule],
 })
 export class TourAddPackageCategory {

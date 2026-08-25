@@ -6,13 +6,15 @@
         <h4 class="mb-0 counter">
           {{ data()?.count }}
           <span class="badge badge-light-{{ data()?.borderColor }} grow">
-            <app-feather-icons [icon]="data()?.trendingIcon" />
+            <app-feather-icons
+              [icon]="$safeNavigationMigration(data()?.trendingIcon)"
+            />
             {{ data()?.trending }}
           </span>
         </h4>
       </div>
       <div class="align-self-center text-center">
-        <app-feather-icons [icon]="data()?.icon" />
+        <app-feather-icons [icon]="$safeNavigationMigration(data()?.icon)" />
       </div>
     </div>
   </div>

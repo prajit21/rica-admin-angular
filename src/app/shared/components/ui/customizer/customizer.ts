@@ -1,10 +1,11 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { LayoutService } from "../../../services/layout.service";
 
 @Component({
   selector: "app-customizer",
   templateUrl: "./customizer.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./customizer.scss",
 })
 export class Customizer {

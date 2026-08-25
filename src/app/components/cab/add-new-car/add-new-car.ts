@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { TagInputModule } from "ngx-chips";
 import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
@@ -7,6 +7,7 @@ import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
   selector: "app-add-new-car",
   templateUrl: "./add-new-car.html",
   styleUrl: "./add-new-car.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [TagInputModule, DropzoneModule],
 })
 export class AddNewCar {

@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { HotelAbout } from "./hotel-about/hotel-about";
 import { HotelDetail } from "./hotel-detail/hotel-detail";
@@ -15,6 +15,7 @@ import { HotelService } from "../../../shared/services/hotel.service";
   selector: "app-hotel-details",
   templateUrl: "./hotel-details.html",
   styleUrl: "./hotel-details.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     HotelDetail,
     HotelTab,

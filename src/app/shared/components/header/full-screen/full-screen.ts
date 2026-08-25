@@ -1,4 +1,9 @@
-import { Component, DOCUMENT, inject } from "@angular/core";
+import {
+  Component,
+  DOCUMENT,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { FeatherIcons } from "../../ui/feather-icons/feather-icons";
 
@@ -6,6 +11,7 @@ import { FeatherIcons } from "../../ui/feather-icons/feather-icons";
   selector: "app-full-screen",
   templateUrl: "./full-screen.html",
   styleUrl: "./full-screen.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FeatherIcons],
 })
 export class FullScreen {

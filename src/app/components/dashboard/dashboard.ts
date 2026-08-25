@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbDatepicker } from "@ng-bootstrap/ng-bootstrap";
 
@@ -15,6 +15,7 @@ import * as data from "../../shared/data/data/dashboard";
   selector: "app-dashboard",
   templateUrl: "./dashboard.html",
   styleUrl: "./dashboard.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     TopCommonData,
     DashboardVisitorChart,

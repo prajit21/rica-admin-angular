@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
@@ -6,6 +6,7 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 @Component({
   selector: "app-logout-modal",
   templateUrl: "./logout-modal.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./logout-modal.scss",
 })
 export class LogoutModal {

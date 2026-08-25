@@ -1,5 +1,10 @@
 import { NgClass, NgTemplateOutlet } from "@angular/common";
-import { Component, HostListener, inject } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import {
   NavigationEnd,
   Router,
@@ -14,6 +19,7 @@ import { FeatherIcons } from "../ui/feather-icons/feather-icons";
   selector: "app-menu",
   templateUrl: "./menu.html",
   styleUrl: "./menu.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     FeatherIcons,
     NgTemplateOutlet,

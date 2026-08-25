@@ -1,4 +1,9 @@
-import { Component, HostListener, inject } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 
 import { NavService } from "../../../services/nav.service";
@@ -11,6 +16,7 @@ import { Customizer } from "../../ui/customizer/customizer";
   selector: "app-layout",
   templateUrl: "./layout.html",
   styleUrl: "./layout.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Header, Menu, RouterOutlet, Footer, Customizer],
 })
 export class Layout {

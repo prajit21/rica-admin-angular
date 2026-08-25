@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   OwlDateTimeModule,
@@ -13,6 +13,7 @@ import { RestaurantService } from "../../../shared/services/restaurant.service";
   selector: "app-add-new-restaurant",
   templateUrl: "./add-new-restaurant.html",
   styleUrl: "./add-new-restaurant.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [OwlDateTimeModule, OwlNativeDateTimeModule, DropzoneModule],
 })
 export class AddNewRestaurant {

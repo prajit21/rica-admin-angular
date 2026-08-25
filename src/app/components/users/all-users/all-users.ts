@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { FeatherIcons } from "../../../shared/components/ui/feather-icons/feather-icons";
@@ -10,6 +10,7 @@ import { UserService } from "../../../shared/services/user.service";
   selector: "app-all-users",
   templateUrl: "./all-users.html",
   styleUrl: "./all-users.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, FeatherIcons, Pagination],
 })
 export class AllUsers {

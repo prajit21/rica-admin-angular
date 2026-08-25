@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
 
@@ -6,6 +6,7 @@ import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
   selector: "app-add-new-user",
   templateUrl: "./add-new-user.html",
   styleUrl: "./add-new-user.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [DropzoneModule],
 })
 export class AddNewUser {

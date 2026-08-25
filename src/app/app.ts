@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 
 import { Loader } from "./shared/components/ui/loader/loader";
@@ -7,6 +7,7 @@ import { Loader } from "./shared/components/ui/loader/loader";
   selector: "app-root",
   imports: [RouterOutlet, Loader],
   templateUrl: "./app.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./app.scss",
 })
 export class App {

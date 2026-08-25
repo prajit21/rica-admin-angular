@@ -1,4 +1,9 @@
-import { Component, inject, input } from "@angular/core";
+import {
+  Component,
+  inject,
+  input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import {
   Gallery,
@@ -15,6 +20,7 @@ import { gallery } from "../../../../shared/interface/restaurant";
   selector: "app-restaurant-gallery",
   imports: [LightboxModule],
   templateUrl: "./restaurant-gallery.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./restaurant-gallery.scss",
 })
 export class RestaurantGallery {

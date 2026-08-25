@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { TagInputModule } from "ngx-chips";
 import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
@@ -7,6 +7,7 @@ import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
   selector: "app-tour-add-package",
   templateUrl: "./tour-add-package.html",
   styleUrl: "./tour-add-package.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [TagInputModule, DropzoneModule],
 })
 export class TourAddPackage {

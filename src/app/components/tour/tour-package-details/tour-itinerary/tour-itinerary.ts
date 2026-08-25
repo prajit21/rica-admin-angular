@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbAccordionDirective,
@@ -17,6 +17,7 @@ import { tourItinerary } from "../../../../shared/interface/tours";
   selector: "app-tour-itinerary",
   templateUrl: "./tour-itinerary.html",
   styleUrl: "./tour-itinerary.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbAccordionDirective,
     NgbAccordionItem,

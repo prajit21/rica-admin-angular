@@ -1,10 +1,11 @@
-import { Component, output } from "@angular/core";
+import { Component, output, ChangeDetectionStrategy } from "@angular/core";
 
 import { tourTab } from "../../../../shared/data/data/tour";
 
 @Component({
   selector: "app-tour-tab",
   templateUrl: "./tour-tab.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./tour-tab.scss",
 })
 export class TourTab {

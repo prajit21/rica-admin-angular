@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { CarouselModule } from "ngx-owl-carousel-o";
 
@@ -10,6 +10,7 @@ import { CabService } from "../../../shared/services/cab.service";
   selector: "app-car-detail",
   templateUrl: "./car-detail.html",
   styleUrl: "./car-detail.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CarouselModule],
 })
 export class CarDetail {

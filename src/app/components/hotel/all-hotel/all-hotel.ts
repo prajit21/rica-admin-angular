@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { FeatherIcons } from "../../../shared/components/ui/feather-icons/feather-icons";
@@ -10,6 +10,7 @@ import { HotelService } from "../../../shared/services/hotel.service";
   selector: "app-all-hotel",
   templateUrl: "./all-hotel.html",
   styleUrl: "./all-hotel.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, FeatherIcons, Pagination],
 })
 export class AllHotel {

@@ -1,4 +1,9 @@
-import { Component, inject, input } from "@angular/core";
+import {
+  Component,
+  inject,
+  input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbRatingConfig, NgbRating } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +13,7 @@ import { hotelReview } from "../../../../shared/interface/hotel";
   selector: "app-hotel-review",
   templateUrl: "./hotel-review.html",
   styleUrl: "./hotel-review.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgbRating],
 })
 export class HotelReview {

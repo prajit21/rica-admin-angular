@@ -1,5 +1,5 @@
 import { SlicePipe } from "@angular/common";
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 
@@ -16,6 +16,7 @@ import { FeatherIcons } from "../ui/feather-icons/feather-icons";
   selector: "app-header",
   templateUrl: "./header.html",
   styleUrl: "./header.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     FeatherIcons,
     ReactiveFormsModule,

@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { TourAccommodation } from "./tour-accommodation/tour-accommodation";
 import { TourGallery } from "./tour-gallery/tour-gallery";
@@ -15,6 +15,7 @@ import { ToursService } from "../../../shared/services/tours.service";
   selector: "app-tour-package-details",
   templateUrl: "./tour-package-details.html",
   styleUrl: "./tour-package-details.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     TourTab,
     TourHighlight,
